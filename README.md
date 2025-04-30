@@ -1,5 +1,9 @@
 # 🅿️ Smart Parking & Surveillance AI Model Challenge
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+
+
 ## 🚗 A Computer Vision-Based Solution for Vehicle Detection, Edge Deployment & Human Action Recognition
 
 This repository contains the solution for the **Smart Parking & Surveillance AI Model Challenge**, which involves developing a deep learning-based system for:
@@ -58,6 +62,9 @@ This folder contains all the necessary files and scripts related to **Task 1**, 
 - `best.pt`  
   Trained YOLOv8s model file. The model was trained using a combination of the **CARPK dataset** and a custom-created dataset featuring **top-down (eagle view) vehicle images** to improve detection accuracy in parking lots.
 
+  📌 **Note**: The vehicle detection model was trained using a combination of the publicly available [CARPK dataset](https://paperswithcode.com/dataset/carpk) and a custom dataset created with top-down images of vehicles. Please ensure appropriate attribution when reusing or redistributing the data.
+
+
 - `bounding_boxes.json`  
   Contains the predefined parking slot coordinates. These were manually marked using the **Ultralytics Parking Solution UI**, which allows you to define parking spaces and export them in JSON format.
 
@@ -68,7 +75,7 @@ This folder contains all the necessary files and scripts related to **Task 1**, 
   A script to launch the Ultralytics-provided UI for mapping and marking parking areas. The JSON file generated from this UI (`bounding_boxes.json`) is used during detection.
 
 - `ParkingManagement_usingCV.py`  
-  Script to detect parked vehicles and available slots on both images and videos using OpenCV and the trained YOLO model (`best.pt`).
+  Script to detect parked vehicles and available slots on both images and videos using OpenCV method *pointpolygontest* and the trained YOLO model (`best.pt`).
 
 - `ParkingManagement_usingUltralytics.py`  
   Alternative implementation using **Ultralytics' official Parking Management System** instead of OpenCV, for streamlined deployment and visualization.
@@ -139,6 +146,8 @@ This folder contains the implementation for the optional bonus task — using YO
 
 - `best.pt`  
   The trained YOLOv8s model (`best.pt`) that performed best on the fall detection dataset.
+  📌 **Note**: The fall detection model was trained using a publicly available dataset from Roboflow. You can access the dataset here: [Fall Detection Dataset (YOLOv8 format)](https://universe.roboflow.com/roboflow-universe-projects/fall-detection-ca3o8/dataset/4/download/yolov8). Please ensure appropriate attribution when reusing or modifying this dataset.
+
 
 - `VIDEOS.md`  
   Contains Google Drive links to demo videos showing:
