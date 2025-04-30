@@ -10,7 +10,7 @@ This repository contains the solution for the **Smart Parking & Surveillance AI 
 
 The project is organized into three tasks, each in its own folder, and follows the challenge requirements closely to ensure a clear, functional, and reproducible solution. The goal is to showcase AI's capability in real-time surveillance and smart city infrastructure, particularly in improving parking management and safety monitoring.
 
-
+---
 ---
 
 ## 📁 Project Structure
@@ -43,7 +43,6 @@ Smart-Parking-Surveillance-AI-Model/
 
 ---
 
-
 ---
 
 ## 🧠 Task 1: Vehicle Detection in Parking Spaces
@@ -51,6 +50,8 @@ Smart-Parking-Surveillance-AI-Model/
 ### 📁 Folder: `Vehicle_Detection_in_Parking_Spaces`
 
 This folder contains all the necessary files and scripts related to **Task 1**, which aims to detect the number of vehicles parked and the available parking slots using a custom-trained YOLOv8 model.
+
+---
 
 ### 📄 Contents:
 
@@ -87,6 +88,8 @@ This folder contains all the necessary files and scripts related to **Task 1**, 
 ### 📁 Folder: `Task_2_Deploymnet`
 
 This folder contains the code and relevant files for converting and deploying the trained YOLOv8 model (`best.pt`) on edge devices such as mobile phones.
+
+---
 
 ### 📄 Contents:
 
@@ -125,6 +128,8 @@ Below are the steps and technologies used to deploy the model on an edge device 
 
 This folder contains the implementation for the optional bonus task — using YOLOv8 to detect specific human actions, specifically **fall detection**, which can be useful for safety monitoring in surveillance systems.
 
+---
+
 ### 📄 Contents:
 
 - `fall_detection.ipynb`  
@@ -141,4 +146,4 @@ This folder contains the implementation for the optional bonus task — using YO
   - Output videos of the trained fall detection model in action
 
 ---
-
+---
