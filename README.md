@@ -2,6 +2,10 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)
+![Computer Vision](https://img.shields.io/badge/Task-Computer%20Vision-lightblue)
+
 
 
 ## 🚗 A Computer Vision-Based Solution for Vehicle Detection, Edge Deployment & Human Action Recognition
