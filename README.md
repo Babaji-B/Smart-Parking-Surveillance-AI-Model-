@@ -145,8 +145,8 @@ This folder contains the implementation for the optional bonus task — using YO
   - The model was trained and tested on both **images** and **videos** to validate performance.
 
 - `best.pt`  
-  The trained YOLOv8s model (`best.pt`) that performed best on the fall detection dataset.
-  
+  The trained YOLOv8s model (`best.pt`) that was trained on the fall detection dataset.
+
   📌 **Note**: The fall detection model was trained using a publicly available dataset from Roboflow. You can access the dataset here: [Fall Detection Dataset (YOLOv8 format)](https://universe.roboflow.com/roboflow-universe-projects/fall-detection-ca3o8/dataset/4/download/yolov8). Please ensure appropriate attribution when reusing or modifying this dataset.
 
 
