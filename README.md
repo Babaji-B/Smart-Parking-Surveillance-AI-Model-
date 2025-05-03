@@ -130,16 +130,9 @@ Below are the steps and technologies used to deploy the model on an edge device 
 #### 1. **Model Conversion**  
 - The YOLOv8 model (`best.pt`) was first converted to ONNX format (`best.onnx`) and then to TensorFlow Lite format (`best_float32.tflite`) for use in mobile deployment.
 
-#### 2. **Integration into Mobile App**
-- Open the `android_app` folder in Android Studio.
-- Place the converted `.tflite` model and the associated labels file (if applicable) inside the `assets` directory:  
-  `android_app\android_app\app\src\main\assets`
-- Update the paths to the model and labels in the `Constants.kt` file located at:  
-  `android_app\android_app\app\src\main\java\com\surendramaran\yolov8tflite`
-- Download and install Android Studio from the official site: [https://developer.android.com/studio](https://developer.android.com/studio)
-- Open Android Studio and choose "Open an existing Android Studio project".
-- Navigate to the `android_app` folder and select it as the project to open.
-- Run the project on a connected Android device or emulator to test the model in real-time.
+#### 2. **Integration into Mobile App** 
+- We utilized the provided Android app template and integrated the converted model into the app.
+- The model was placed in the `assets` directory, and paths to the model and labels were updated in the `Constants.kt` file.
 
 #### 3. **Tools & Frameworks**
 - Ultralytics (for model training and conversion)
