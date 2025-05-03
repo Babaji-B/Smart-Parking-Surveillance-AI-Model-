@@ -36,7 +36,7 @@ Smart-Parking-Surveillance-AI-Model/
 │   └── VIDEOS.md
 │
 ├── Task_2_Deploymnet/
-│   ├── deployment.ipynb
+│   ├── converting_into_tflite.ipynb
 │   ├── android_app/
 │   ├── best.onnx
 │   ├── best_float32.tflite
@@ -112,7 +112,7 @@ This folder contains the code and relevant files for converting and deploying th
 
 ### 📄 Contents:
 
-- `deployment.ipynb`  
+- `converting_into_tflite.ipynb`  
   Jupyter notebook demonstrating the process of converting the `best.pt` model to a **TensorFlow Lite (.tflite)** format, which is optimized for mobile and other lightweight edge devices.
 
 - `android_app/`  
