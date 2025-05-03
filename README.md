@@ -36,7 +36,11 @@ Smart-Parking-Surveillance-AI-Model/
 │   └── VIDEOS.md
 │
 ├── Task_2_Deploymnet/
-│   └── deployment.ipynb
+│   ├── deployment.ipynb
+│   ├── android_app/
+│   ├── best.onnx
+│   ├── best_float32.tflite
+│   └── best.pt
 │
 ├── FallDetection_Folder/
 │   ├── best.pt
@@ -45,7 +49,9 @@ Smart-Parking-Surveillance-AI-Model/
 │
 ├── requirements.txt
 ├── .gitignore
-└── README.md
+├── README.md
+└── LICENSE
+
 
 ```
 
@@ -100,6 +106,8 @@ This folder contains all the necessary files and scripts related to **Task 1**, 
 
 This folder contains the code and relevant files for converting and deploying the trained YOLOv8 model (`best.pt`) on edge devices such as mobile phones.
 
+> **Note:** We used an open-source [GitHub repository](https://github.com/surendramaran/YOLOv8-TfLite-Object-Detector) that provided an `android_app` structure for developing and running the TFLite model inside an Android app using Android Studio.
+
 ---
 
 ### 📄 Contents:
@@ -107,27 +115,38 @@ This folder contains the code and relevant files for converting and deploying th
 - `deployment.ipynb`  
   Jupyter notebook demonstrating the process of converting the `best.pt` model to a **TensorFlow Lite (.tflite)** format, which is optimized for mobile and other lightweight edge devices.
 
+- `android_app/`  
+  Android Studio project folder used to build the mobile app that integrates and runs the YOLOv8 model.
+
+- `best.pt`, `best_float32.tflite`, `best.onnx`  
+  Model files generated and used during deployment.
+
 ---
 
 ### 🚀 Deployment Process & Tools Used
 
 Below are the steps and technologies used to deploy the model on an edge device (e.g., Android mobile):
 
-> 📝 **Note**: These steps will be updated soon with exact details of the deployment.
+#### 1. **Model Conversion**  
+- The YOLOv8 model (`best.pt`) was first converted to ONNX format (`best.onnx`) and then to TensorFlow Lite format (`best_float32.tflite`) for use in mobile deployment.
 
-1. **Model Conversion**  
-   - Converting YOLOv8 `.pt` model to `.tflite` using ONNX or TensorFlow pipelines.
+#### 2. **Integration into Mobile App**
+- Open the `android_app` folder in Android Studio.
+- Place the converted `.tflite` model and the associated labels file (if applicable) inside the `assets` directory:  
+  `android_app\android_app\app\src\main\assets`
+- Update the paths to the model and labels in the `Constants.kt` file located at:  
+  `android_app\android_app\app\src\main\java\com\surendramaran\yolov8tflite`
+- Download and install Android Studio from the official site: [https://developer.android.com/studio](https://developer.android.com/studio)
+- Open Android Studio and choose "Open an existing Android Studio project".
+- Navigate to the `android_app` folder and select it as the project to open.
+- Run the project on a connected Android device or emulator to test the model in real-time.
 
-2. **Integration into Mobile App**  
-   - [To be updated]
-
-3. **Tools & Frameworks**  
-   - TensorFlow Lite  
-   - ONNX  
-   - [To be updated]
-
-4. **Performance Metrics (FPS, latency, etc.)**  
-   - [To be updated]
+#### 3. **Tools & Frameworks**
+- Ultralytics (for model training and conversion)
+- ONNX (intermediate format)
+- TensorFlow Lite (for edge optimization)
+- Android Studio (for app development)
+- Kotlin (for app codebase)
 
 ---
 
